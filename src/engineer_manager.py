@@ -1,9 +1,8 @@
 import json
 from tkinter import *
-"""
 with open('engineers.json', 'r') as data_file:
 	data = json.load(data_file)
-"""
+
 def addEntry():
 	return
 
@@ -42,7 +41,7 @@ def makeWindow():
 	return win
 
 def setSelect():
-	return
-
+	engineers = []
+	
 win = makeWindow()
 win.mainloop()
