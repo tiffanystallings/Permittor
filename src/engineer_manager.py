@@ -19,7 +19,7 @@ def makeWindow():
 	header = LabelFrame(win)
 	header.pack(fill='both', expand='yes')
 
-	headertext = Label(header, text='Add, Remove, and Edit Engineers')
+	headertext = Label(header, text='Add, Remove, and blahblahblah')
 	headertext.pack()
 
 	buttons = Frame(win)
