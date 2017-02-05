@@ -1,0 +1,64 @@
+city:
+Acworth
+Alpharetta
+Atlanta
+Austell
+Brookhaven
+Calhoun
+Canton
+Cartersville
+Chamblee
+College Park
+Cumming
+Dallas
+Decatur
+Douglasville
+Duluth
+Dunwoody
+Fairburn
+Fayetteville
+Forrest Park
+Holly Springs
+Jonesboro
+Kennesaw
+Marietta
+Milton
+Norcross
+Palmetto
+Peachtree City
+Powder Springs
+Roswell
+Sandy Springs
+Smyrna
+StockBridge Tyrone
+Union City
+Villa Rica
+Woodstock
+Lake City
+
+County:
+Clayton
+cobb
+cowetta
+decal
+douglas
+east point
+Fayette
+Forsyth
+Fulton
+Hall
+Henry
+Jackson
+
+EMC:
+Walton
+Sawnee
+North Ga
+Jackson
+Greystone
+GPC
+Cartersville
+Covington Power
+Carroll
+Coweta-Fayette
+

@@ -24,7 +24,7 @@ def makeWindow():
 
 	buttons = Frame(win)
 	buttons.pack()
-	add = Button(buttons, text = '  Add  ', command = addEntry)
+	add = Button(buttons, text = '  City  ', command = addEntry)
 	update = Button(buttons, text = '  Update ', command = updateEntry)
 	delete = Button(buttons, text = '  Delete  ', command = deleteEntry)
 	add.pack(side=LEFT, padx=10)
