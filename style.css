@@ -1,0 +1,17 @@
+main {
+	text-align: center;
+}
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+.button {
+	background-color: cyan;
+	width: 200px;
+	border-radius: 50px;
+	margin: 20px;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+}
