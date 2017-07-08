@@ -7,7 +7,7 @@ main {
 }
 
 .button {
-	background-color: cyan;
+	background-color: #4286f4;
 	width: 200px;
 	border-radius: 50px;
 	margin: 20px;
@@ -17,7 +17,7 @@ main {
 }
 
 .expand {
-	background-color: cyan;
+	background-color: #4286f4;
 	border-radius: 50px;
 	margin: 20px;
 	color: white;

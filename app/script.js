@@ -4,12 +4,13 @@ var ReactDOM = require('react-dom');
 
 var app = document.getElementById('app');
 
+// Class Declarations
 class Welcome extends React.Component {
-	render(){
+	render() {
 		return (
 			<div id='welcome'>
-				<h1>Welcome to Permittor!</h1>
-				<h4>Is your permit City, County, or EMC?</h4>
+				<h1>Welcome to Perfect Permit!</h1>
+				<h4>Is your permit City, County, or Utility?</h4>
 				<div className = 'row'>
 					<div className = 'button' id='city'>
 						<p>City</p>
@@ -18,10 +19,34 @@ class Welcome extends React.Component {
 						<p>County</p>
 					</div>
 					<div className = 'button' id='emc'>
-						<p>EMC</p>
+						<p>Utility</p>
 					</div>
 				</div>
 			</div>
+		);
+	}
+};
+
+class City extends React.Component {
+	render() {
+		return (
+			<p>Which city would you like to permit for?</p>
+		);
+	}
+};
+
+class County extends React.Component {
+	render() {
+		return (
+			<p>Which county would you like to permit for?</p>
+		);
+	}
+};
+
+class EMC extends React.Component {
+	render () {
+		return (
+			<p>Which utility company would you like to permit for?</p>
 		);
 	}
 };
@@ -59,6 +84,11 @@ city.addEventListener('click', function() {
 	};
 	city.classList.add('expand');
 	city.classList.remove('button');
+
+	ReactDOM.render(
+		<City />,
+		city
+	);
 });
 
 county.addEventListener('click', function() {
@@ -67,6 +97,12 @@ county.addEventListener('click', function() {
 	};
 	county.classList.add('expand');
 	county.classList.remove('button');
+
+	ReactDOM.render(
+		<County />,
+		county
+	);
+
 });
 
 emc.addEventListener('click', function() {
@@ -75,4 +111,9 @@ emc.addEventListener('click', function() {
 	};
 	emc.classList.add('expand');
 	emc.classList.remove('button');
+
+	ReactDOM.render(
+		<EMC />,
+		emc
+	);
 });

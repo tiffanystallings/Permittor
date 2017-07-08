@@ -9752,6 +9752,7 @@ var ReactDOM = __webpack_require__(98);
 
 var app = document.getElementById('app');
 
+// Class Declarations
 class Welcome extends React.Component {
 	render() {
 		return React.createElement(
@@ -9760,12 +9761,12 @@ class Welcome extends React.Component {
 			React.createElement(
 				'h1',
 				null,
-				'Welcome to Permittor!'
+				'Welcome to Perfect Permit!'
 			),
 			React.createElement(
 				'h4',
 				null,
-				'Is your permit City, County, or EMC?'
+				'Is your permit City, County, or Utility?'
 			),
 			React.createElement(
 				'div',
@@ -9794,10 +9795,40 @@ class Welcome extends React.Component {
 					React.createElement(
 						'p',
 						null,
-						'EMC'
+						'Utility'
 					)
 				)
 			)
+		);
+	}
+};
+
+class City extends React.Component {
+	render() {
+		return React.createElement(
+			'p',
+			null,
+			'Which city would you like to permit for?'
+		);
+	}
+};
+
+class County extends React.Component {
+	render() {
+		return React.createElement(
+			'p',
+			null,
+			'Which county would you like to permit for?'
+		);
+	}
+};
+
+class EMC extends React.Component {
+	render() {
+		return React.createElement(
+			'p',
+			null,
+			'Which utility company would you like to permit for?'
 		);
 	}
 };
@@ -9831,6 +9862,8 @@ city.addEventListener('click', function () {
 	};
 	city.classList.add('expand');
 	city.classList.remove('button');
+
+	ReactDOM.render(React.createElement(City, null), city);
 });
 
 county.addEventListener('click', function () {
@@ -9839,6 +9872,8 @@ county.addEventListener('click', function () {
 	};
 	county.classList.add('expand');
 	county.classList.remove('button');
+
+	ReactDOM.render(React.createElement(County, null), county);
 });
 
 emc.addEventListener('click', function () {
@@ -9847,6 +9882,8 @@ emc.addEventListener('click', function () {
 	};
 	emc.classList.add('expand');
 	emc.classList.remove('button');
+
+	ReactDOM.render(React.createElement(EMC, null), emc);
 });
 
 /***/ }),
