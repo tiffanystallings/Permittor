@@ -30,6 +30,7 @@ main {
 
 .button:hover {
 	background-color: #61ed92;
+	cursor: pointer;
 }
 
 .hidden {
