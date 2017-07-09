@@ -3,6 +3,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 var permits = require('./permits.json');
+var engineers = require('./engineers.json')
 
 var cities = Object.keys(permits["cities"]);
 var counties = Object.keys(permits["counties"]);
@@ -38,6 +39,7 @@ class City extends React.Component {
 			<div id="select-city">
 				<p>Which city would you like to permit for?</p>
 				<select>{cities.map(makeOption)}</select>
+				{engineerSelect()}
 				{makeButtons()}
 			</div>
 		);
@@ -50,6 +52,7 @@ class County extends React.Component {
 			<div id="select-county">
 				<p>Which county would you like to permit for?</p>
 				<select>{counties.map(makeOption)}</select>
+				{engineerSelect()}
 				{makeButtons()}
 			</div>
 		);
@@ -62,6 +65,7 @@ class EMC extends React.Component {
 			<div id="select-utility">
 				<p>Which utility company would you like to permit for?</p>
 				<select>{utilities.map(makeOption)}</select>
+				{engineerSelect()}
 				{makeButtons()}
 			</div>
 		);
@@ -88,6 +92,16 @@ var elems = [city, county, emc, h1, h4];
 function makeOption(item) {
 	return <option value={item}>{item}</option>
 };
+
+function engineerSelect() {
+	var engineerList = Object.keys(engineers)
+	return (
+		<div>
+			<p>Which engineer are you permitting for?</p>
+			<select>{engineerList.map(makeOption)}</select>
+		</div>
+	)
+}
 
 function minusItem(item, list) {
 	var newList = [];
