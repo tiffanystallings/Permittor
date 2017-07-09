@@ -10538,6 +10538,7 @@ class City extends React.Component {
 				cities.map(makeOption)
 			),
 			engineerSelect(),
+			makeInputs(),
 			makeButtons()
 		);
 	}
@@ -10559,6 +10560,7 @@ class County extends React.Component {
 				counties.map(makeOption)
 			),
 			engineerSelect(),
+			makeInputs(),
 			makeButtons()
 		);
 	}
@@ -10580,6 +10582,7 @@ class EMC extends React.Component {
 				utilities.map(makeOption)
 			),
 			engineerSelect(),
+			makeInputs(),
 			makeButtons()
 		);
 	}
@@ -10606,6 +10609,37 @@ function makeOption(item) {
 	);
 };
 
+function makeInputs() {
+	return React.createElement(
+		'div',
+		null,
+		React.createElement(
+			'p',
+			null,
+			'Permit Number'
+		),
+		React.createElement('input', { id: 'number', type: 'text' }),
+		React.createElement(
+			'p',
+			null,
+			'Project Name'
+		),
+		React.createElement('input', { id: 'name', type: 'text' }),
+		React.createElement(
+			'p',
+			null,
+			'Project Address'
+		),
+		React.createElement('input', { id: 'address', type: 'text' }),
+		React.createElement(
+			'p',
+			null,
+			'Description of Work'
+		),
+		React.createElement('textarea', { name: 'description', rows: '2', cols: '25' })
+	);
+};
+
 function engineerSelect() {
 	var engineerList = Object.keys(engineers);
 	return React.createElement(
@@ -10622,7 +10656,7 @@ function engineerSelect() {
 			engineerList.map(makeOption)
 		)
 	);
-}
+};
 
 function minusItem(item, list) {
 	var newList = [];

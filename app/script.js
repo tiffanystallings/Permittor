@@ -40,6 +40,7 @@ class City extends React.Component {
 				<p>Which city would you like to permit for?</p>
 				<select>{cities.map(makeOption)}</select>
 				{engineerSelect()}
+				{makeInputs()}
 				{makeButtons()}
 			</div>
 		);
@@ -53,6 +54,7 @@ class County extends React.Component {
 				<p>Which county would you like to permit for?</p>
 				<select>{counties.map(makeOption)}</select>
 				{engineerSelect()}
+				{makeInputs()}
 				{makeButtons()}
 			</div>
 		);
@@ -66,6 +68,7 @@ class EMC extends React.Component {
 				<p>Which utility company would you like to permit for?</p>
 				<select>{utilities.map(makeOption)}</select>
 				{engineerSelect()}
+				{makeInputs()}
 				{makeButtons()}
 			</div>
 		);
@@ -93,6 +96,21 @@ function makeOption(item) {
 	return <option value={item}>{item}</option>
 };
 
+function makeInputs() {
+	return (
+		<div>
+			<p>Permit Number</p>
+			<input id="number" type="text" />
+			<p>Project Name</p>
+			<input id="name" type="text" />
+			<p>Project Address</p>
+			<input id="address" type="text" />
+			<p>Description of Work</p>
+			<textarea name="description" rows="2" cols="25"></textarea>
+		</div>
+	)
+};
+
 function engineerSelect() {
 	var engineerList = Object.keys(engineers)
 	return (
@@ -101,7 +119,7 @@ function engineerSelect() {
 			<select>{engineerList.map(makeOption)}</select>
 		</div>
 	)
-}
+};
 
 function minusItem(item, list) {
 	var newList = [];
