@@ -1,0 +1,56 @@
+{
+	"April Blackburn": {
+		"address": "1038 W. Peachtree St.<br>Atlanta, GA 30309",
+		"office": "770-559-6821",
+		"cell": "770-351-7792",
+		"email": "april_blackburn@comcast.com"
+	},
+	"Phil Reilly": {
+		"address": "415 Veterans Memorial Blvd.<br>Cumming, GA 30040",
+		"office": "770-559-2973",
+		"cell": "678-628-1729",
+		"email": "philip_reilly2@comcast.com"
+	},
+	"Byron Grinnage": {
+		"address": "2925 Courtyards Dr.<br>Norcross, GA 30071",
+		"office": "770-559-6621",
+		"cell": "248-867-8195",
+		"email": "byron_grinnage@comcast.com"
+	},
+	"Xavier (Randy) Coleman": {
+		"address": "2925 Courtyards Dr.<br>Norcross, GA 30071",
+		"office": "770-559-6195",
+		"cell": "470-249-9357",
+		"email": "xavier_coleman@comcast.com"
+	},
+	"Leigh Hutcheson": {
+		"address": "415 Veterans Memorial Blvd.<br>Cumming, GA 30040",
+		"office": "770-559-2230",
+		"cell": "",
+		"email": "leigh_hutcheson@comcast.com"
+	},
+	"Victor Brannan": {
+		"address": "697 Marietta Hwy<br>Canton, GA 30114",
+		"office": "770-559-6894",
+		"cell": "",
+		"email": "victor_brannan@comcast.com"
+	},
+	"Maxime (Max) Laurenceau": {
+		"address": "697 Marietta Hwy<br>Canton, GA 30114",
+		"office": "770-559-2096",
+		"cell": "",
+		"email": "maxime_laurenceau@comcast.com"
+	},
+	"Shannon Rawlins": {
+		"address": "1038 W. Peachtree St.<br>Atlanta, GA 30309",
+		"office": "770-559-2461",
+		"cell": "",
+		"email": "shannon_rawlins@comcast.com"
+	},
+	"Doug Abrams": {
+		"address": "2925 Courtyards Dr.<br>Norcross, GA 30071",
+		"office": "770-559-6637",
+		"cell": "770-231-9552",
+		"email": "doug_abrams@comcast.com"
+	}
+}

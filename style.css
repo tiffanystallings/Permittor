@@ -1,0 +1,38 @@
+main {
+	text-align: center;
+}
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+.button {
+	background-color: #4286f4;
+	width: 200px;
+	border-radius: 50px;
+	margin: 20px;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+}
+
+.expand {
+	background-color: #4286f4;
+	border-radius: 50px;
+	margin: 20px;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+	width: 700px;
+	height: 600px;
+	transition: all .5s ease;
+}
+
+.button:hover {
+	background-color: #61ed92;
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
