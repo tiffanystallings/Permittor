@@ -36,10 +36,9 @@ class Welcome extends React.Component {
 class City extends React.Component {
 	render() {
 		return (
-			<div id="select-city">
+			<div>
 				<p>Which city would you like to permit for?</p>
-				<select>{cities.map(makeOption)}</select>
-				{engineerSelect()}
+				<select id="select-permit">{cities.map(makeOption)}</select>
 				{makeInputs()}
 				{makeButtons()}
 			</div>
@@ -50,10 +49,9 @@ class City extends React.Component {
 class County extends React.Component {
 	render() {
 		return (
-			<div id="select-county">
+			<div>
 				<p>Which county would you like to permit for?</p>
-				<select>{counties.map(makeOption)}</select>
-				{engineerSelect()}
+				<select id="select-permit">{counties.map(makeOption)}</select>
 				{makeInputs()}
 				{makeButtons()}
 			</div>
@@ -64,10 +62,9 @@ class County extends React.Component {
 class EMC extends React.Component {
 	render () {
 		return (
-			<div id="select-utility">
+			<div>
 				<p>Which utility company would you like to permit for?</p>
-				<select>{utilities.map(makeOption)}</select>
-				{engineerSelect()}
+				<select id="select-permit">{utilities.map(makeOption)}</select>
 				{makeInputs()}
 				{makeButtons()}
 			</div>
@@ -92,6 +89,11 @@ var elems = [city, county, emc, h1, h4];
 
 
 // Helper functions
+
+function trim (str) {
+     return str.replace (/^\s+|\s+$/g, '');
+};
+
 function makeOption(item) {
 	return <option value={item}>{item}</option>
 };
@@ -99,6 +101,7 @@ function makeOption(item) {
 function makeInputs() {
 	return (
 		<div>
+			{engineerSelect()}
 			<p>Permit Number</p>
 			<input id="number" type="text" />
 			<p>Project Name</p>
@@ -116,7 +119,7 @@ function engineerSelect() {
 	return (
 		<div>
 			<p>Which engineer are you permitting for?</p>
-			<select>{engineerList.map(makeOption)}</select>
+			<select id="select-engineer">{engineerList.map(makeOption)}</select>
 		</div>
 	)
 };
@@ -137,7 +140,27 @@ function makeButtons() {
 			<div className= 'button' id='next'>Next</div>
 		</div>
 	)
-}
+};
+
+function getFirstInputs() {
+	var pSlct = document.getElementById('select-permit');
+	var selectedPermit = pSlct.options[pSlct.selectedIndex].text;
+
+	var eSlct = document.getElementById('select-engineer');
+	var selectedEngineer = eSlct.options[eSlct.selectedIndex].text;
+
+	var numberInput = document.getElementById('number');
+	var permitNumber = numberInput.value;
+
+	var nameInput = document.getElementById('name');
+	var projectName = nameInput.value;
+
+	var addressInput = document.getElementById('address');
+	var projectAddress = addressInput.value;
+
+	return [selectedPermit, selectedEngineer, permitNumber, 
+			projectName, projectAddress]
+};
 
 // Event Listeners
 city.addEventListener('click', function() {

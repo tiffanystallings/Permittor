@@ -10526,7 +10526,7 @@ class City extends React.Component {
 	render() {
 		return React.createElement(
 			'div',
-			{ id: 'select-city' },
+			null,
 			React.createElement(
 				'p',
 				null,
@@ -10534,10 +10534,9 @@ class City extends React.Component {
 			),
 			React.createElement(
 				'select',
-				null,
+				{ id: 'select-permit' },
 				cities.map(makeOption)
 			),
-			engineerSelect(),
 			makeInputs(),
 			makeButtons()
 		);
@@ -10548,7 +10547,7 @@ class County extends React.Component {
 	render() {
 		return React.createElement(
 			'div',
-			{ id: 'select-county' },
+			null,
 			React.createElement(
 				'p',
 				null,
@@ -10556,10 +10555,9 @@ class County extends React.Component {
 			),
 			React.createElement(
 				'select',
-				null,
+				{ id: 'select-permit' },
 				counties.map(makeOption)
 			),
-			engineerSelect(),
 			makeInputs(),
 			makeButtons()
 		);
@@ -10570,7 +10568,7 @@ class EMC extends React.Component {
 	render() {
 		return React.createElement(
 			'div',
-			{ id: 'select-utility' },
+			null,
 			React.createElement(
 				'p',
 				null,
@@ -10578,10 +10576,9 @@ class EMC extends React.Component {
 			),
 			React.createElement(
 				'select',
-				null,
+				{ id: 'select-permit' },
 				utilities.map(makeOption)
 			),
-			engineerSelect(),
 			makeInputs(),
 			makeButtons()
 		);
@@ -10601,6 +10598,11 @@ var h4 = document.querySelector('h4');
 var elems = [city, county, emc, h1, h4];
 
 // Helper functions
+
+function trim(str) {
+	return str.replace(/^\s+|\s+$/g, '');
+};
+
 function makeOption(item) {
 	return React.createElement(
 		'option',
@@ -10613,6 +10615,7 @@ function makeInputs() {
 	return React.createElement(
 		'div',
 		null,
+		engineerSelect(),
 		React.createElement(
 			'p',
 			null,
@@ -10652,7 +10655,7 @@ function engineerSelect() {
 		),
 		React.createElement(
 			'select',
-			null,
+			{ id: 'select-engineer' },
 			engineerList.map(makeOption)
 		)
 	);
@@ -10678,7 +10681,26 @@ function makeButtons() {
 			'Next'
 		)
 	);
-}
+};
+
+function getFirstInputs() {
+	var pSlct = document.getElementById('select-permit');
+	var selectedPermit = pSlct.options[pSlct.selectedIndex].text;
+
+	var eSlct = document.getElementById('select-engineer');
+	var selectedEngineer = eSlct.options[eSlct.selectedIndex].text;
+
+	var numberInput = document.getElementById('number');
+	var permitNumber = numberInput.value;
+
+	var nameInput = document.getElementById('name');
+	var projectName = nameInput.value;
+
+	var addressInput = document.getElementById('address');
+	var projectAddress = addressInput.value;
+
+	return [selectedPermit, selectedEngineer, permitNumber, projectName, projectAddress];
+};
 
 // Event Listeners
 city.addEventListener('click', function () {
